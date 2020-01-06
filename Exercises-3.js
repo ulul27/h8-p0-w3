@@ -7,16 +7,20 @@ var input = [
 
 function dataHandling(text) {
 
-        for (var i = 0 ; i < input.length ; i++) {
-            console.log('Nomor ID : ' + input[i][0])
-            console.log('Nama Lengkap : ' + input[i][1])
-            console.log('TTL : ' + input[i][2] + ' ' +input[i][3])
-            console.log('Hobi : ' + input[i][4])
-            console.log()
-            
-        }
-        
-        
+    let str = ''
+    for (var i = 0; i < input.length; i++) {
+
+        str += `
+Nomor ID : ${input[i][0]}
+Nama Lengkap : ${input[i][1]}
+TTL : ${input[i][2]} ${input[i][3]}
+Hobi : ${input[i][4]}
+
+        `
+
+        // str += `Nomor ID : ${input[i][0]} \nNama Lengkap : ${input[i][1]} \nTTL : ${input[i][2]} ${input[i][3]} \nHobi : ${input[i][4]}\n`
+    }
+    return str
 }
 
- console.log(dataHandling(input));
+console.log(dataHandling(input));
